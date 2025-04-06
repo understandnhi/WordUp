@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(gridLayoutManager);
         dataList = new ArrayList<>();
 
-        androidData = new DataClass(R.drawable.numbers, "Numbers", 8, 2);
+        androidData = new DataClass(R.drawable.img_numbers, "Numbers", 8, 2);
         dataList.add(androidData);
 
         androidData = new DataClass(R.drawable.img_animals, "Animals", 10, 0);
