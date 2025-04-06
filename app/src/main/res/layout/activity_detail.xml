@@ -32,7 +32,7 @@
                 android:layout_gravity="start"
                 android:layout_marginRight="18dp"
                 android:padding="0dp"
-                android:src="@drawable/arrow_back_vector" />
+                android:src="@drawable/ic_arrow_back_vector" />
 
             <!-- Icon user bên phải -->
 <!--            <ImageView-->
@@ -55,7 +55,7 @@
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
 
         <TextView
-            android:id="@+id/recDeckName"
+            android:id="@+id/detailDeckName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -72,7 +72,7 @@
             android:gravity="center">
 
             <TextView
-                android:id="@+id/recKnown"
+                android:id="@+id/detailKnown"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
@@ -83,7 +83,7 @@
 
 
             <TextView
-                android:id="@+id/recNotKnown"
+                android:id="@+id/detailNotKnown"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
 

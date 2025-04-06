@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#E0F2E9">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/toolbar_bg"
+
+            app:titleTextColor="@color/primary_color">
+
+            <!-- Title ở giữa -->
+            <ImageView
+                android:id="@+id/userIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="start"
+                android:layout_marginRight="18dp"
+                android:padding="0dp"
+                android:src="@drawable/ic_close_vector" />
+
+            <TextView
+                android:id="@+id/DeckName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Numbers"
+                android:textColor="@color/primary_color"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1/10"
+                android:textSize="16sp"
+                android:layout_gravity="end"
+                android:layout_marginRight="18dp"/>
+
+            <!-- Icon user bên phải -->
+            <!--            <ImageView-->
+            <!--                android:id="@+id/userIcon"-->
+            <!--                android:layout_width="32dp"-->
+            <!--                android:layout_height="32dp"-->
+            <!--                android:layout_gravity="end"-->
+            <!--                android:layout_marginRight="18dp"-->
+            <!--                android:padding="0dp"-->
+            <!--                android:src="@drawable/user_vector" />-->
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <!-- Circular Button with Icon and Text -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="32dp">
+
+        <Button
+            android:id="@+id/playButton"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/circular_button_background"
+            android:drawableTop="@android:drawable/ic_lock_silent_mode_off"
+            android:padding="16dp"
+            android:text="Bấm để nghe"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:gravity="center"
+            app:backgroundTint="#388E3C" />
+    </LinearLayout>
+
+    <!-- Option Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="21dp">
+
+        <Button
+            android:id="@+id/optionOne"
+            android:text="One"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:textColor="@color/text_color"
+            android:textSize="20sp"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/optionThree"
+            android:text="Three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:textColor="@color/text_color"
+            android:textSize="20sp"
+            app:strokeWidth="1dp"  />
+
+        <Button
+            android:id="@+id/optionTwo"
+            android:text="Two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:textColor="@color/text_color"
+            android:textSize="20sp"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/optionZero"
+            android:text="Zero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:textColor="@color/text_color"
+            android:textSize="20sp"
+            app:strokeWidth="1dp"  />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tiếp tục"
+            android:textColor="@color/text_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/secondary_color"
+            app:strokeColor="@color/text_color"
+            app:strokeWidth="2dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="95dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

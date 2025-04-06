@@ -73,7 +73,6 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:text="Đăng nhập"
             android:textColor="@color/text_color"
             android:textSize="20sp"
@@ -86,10 +85,10 @@
             android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="roboto"
             android:text="Bạn chưa có tài khoản? Đăng ký"
             android:textAlignment="center"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"/>
 
 
     </LinearLayout>
