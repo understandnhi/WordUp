@@ -45,6 +45,7 @@
             android:layout_height="40dp"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="26dp"
+            android:autofillHints=""
             android:background="@drawable/custom_edittext"
             android:ems="10"
             android:inputType="textEmailAddress"
@@ -53,7 +54,8 @@
             android:textAlignment="viewStart"
             android:textColor="@color/gray"
             android:textSize="16sp"
-            tools:text="Email" />
+            tools:text="Email"
+            tools:ignore="LabelFor" />
 
         <EditText
             android:id="@+id/editTextText"

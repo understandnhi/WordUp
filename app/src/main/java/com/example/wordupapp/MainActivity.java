@@ -1,5 +1,6 @@
 package com.example.wordupapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -24,8 +25,19 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Kiểm tra nếu là tablet thì chuyển sang TwoPaneActivity
+        if (getResources().getConfiguration().smallestScreenWidthDp >= 600) {
+            Intent intent = new Intent(this, TwoPaneActivity.class);
+            startActivity(intent);
+            finish();
+            return;
+        }
+
+        // Nếu không phải tablet thì tiếp tục như cũ
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -34,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerView);
 
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(MainActivity.this,1);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(MainActivity.this, 1);
         recyclerView.setLayoutManager(gridLayoutManager);
         dataList = new ArrayList<>();
 
@@ -58,13 +70,7 @@ public class MainActivity extends AppCompatActivity {
             Log.d("DEBUG", d.getDeckName());
         }
 
-        //Kiểm tra kích thước
-        recyclerView.post(new Runnable() {
-            @Override
-            public void run() {
-                Log.d("DEBUG", "RecyclerView height: " + recyclerView.getHeight());
-            }
-        });
-
+        // Debug height
+        recyclerView.post(() -> Log.d("DEBUG", "RecyclerView height: " + recyclerView.getHeight()));
     }
 }

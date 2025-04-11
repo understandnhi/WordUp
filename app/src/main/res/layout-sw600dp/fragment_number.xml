@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E0F2E9"
+    android:padding="16dp"
+    tools:context=".NumberFragment"
+    tools:ignore="MissingDefaultResource">
+
+    <!-- Circular Play Button -->
+    <Button
+        android:id="@+id/playButton"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@drawable/circular_button_background"
+        android:drawableTop="@android:drawable/ic_lock_silent_mode_off"
+        android:padding="16dp"
+        android:text="Bấm để nghe"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:contentDescription="Play or stop sound"
+        app:backgroundTint="#388E3C"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/optionOne"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <!-- Option Buttons -->
+    <Button
+        android:id="@+id/optionOne"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="One"
+        android:textSize="18sp"
+        android:background="@drawable/rounded_button_background"
+        android:padding="16dp"
+        android:contentDescription="Play sound for number one"
+        app:layout_constraintTop_toBottomOf="@id/playButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/optionThree"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/optionThree"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Three"
+        android:textSize="18sp"
+        android:background="@drawable/rounded_button_background"
+        android:padding="16dp"
+        android:contentDescription="Play sound for number three"
+        app:layout_constraintTop_toBottomOf="@id/optionOne"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/optionTwo"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/optionTwo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Two"
+        android:textSize="18sp"
+        android:background="@drawable/rounded_button_background"
+        android:padding="16dp"
+        android:contentDescription="Play sound for number two"
+        app:layout_constraintTop_toBottomOf="@id/optionThree"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/optionZero"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/optionZero"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Zero"
+        android:textSize="18sp"
+        android:background="@drawable/rounded_button_background"
+        android:padding="16dp"
+        android:contentDescription="Play sound for number zero"
+        app:layout_constraintTop_toBottomOf="@id/optionTwo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
